@@ -1,11 +1,10 @@
 "use client";
 
-import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import PokeGrid from './components/PokeGrid';
 
 export default function Home() {
-  const limit = 100
+  const limit = 101
   const [offset, setOffset] = useState(0)
   const [apiLink, setApiLink] = useState(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`);
   const [pokemon, setPokemon] = useState([])
@@ -27,7 +26,7 @@ export default function Home() {
 
   function nextPage() {
     let link = apiLink
-    if(offset < 1200) {
+    if(offset < 900) {
       setApiLink(link.replace(`offset=${offset}`, `offset=${offset + limit}`))
       setOffset(offset + limit);
     }

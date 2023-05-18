@@ -1,10 +1,12 @@
+import PokeCard from "./PokeCard"
 
 export default function PokeGrid({ pokemon }) {
+    
     return (
          <>
             <div>
                 {pokemon?.map(pokemon => (
-                    <div key={pokemon.name}>{pokemon.name}</div>
+                    <PokeCard key={pokemon.name} pokemon={pokemon} />
                 ))}
             </div>
          </>
