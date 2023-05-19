@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import PokeGrid from './components/PokeGrid';
 
 export default function Home() {
-  const limit = 101
+  const limit = 505
   const [offset, setOffset] = useState(0)
   const [apiLink, setApiLink] = useState(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`);
   const [pokemon, setPokemon] = useState([])
@@ -19,7 +19,7 @@ export default function Home() {
         } else {
           setPokemon(resData.results)
         }
-        console.log("TEST",resData.results)
+        // console.log("TEST",resData.results)
       }
       fetchData()
     }, [apiLink]);

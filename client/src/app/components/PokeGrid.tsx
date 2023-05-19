@@ -4,7 +4,7 @@ export default function PokeGrid({ pokemon }) {
     
     return (
          <>
-            <div>
+            <div className="flex flex-wrap justify-center">
                 {pokemon?.map(pokemon => (
                     <PokeCard key={pokemon.name} pokemon={pokemon} />
                 ))}
