@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+input {
+  outline: auto;
+  margin: 8px;
+  padding: 6px;
+}
+button {
+  outline: auto;
+  padding: 6px;
+  margin: 4px;
+}

@@ -24,6 +24,17 @@ export default function Home() {
       fetchData()
     }, [apiLink]);
 
+      // useEffect(() => {
+      //   const pokemon = JSON.parse(localStorage.getItem('pokemon'));
+      //   if (pokemon) {
+      //     setPokemon(pokemon);
+      //   }
+      // }, []);
+
+      // useEffect(() => {
+      //   localStorage.setItem('pokemon', JSON.stringify(pokemon))
+      // }, [pokemon])
+
   function nextPage() {
     let link = apiLink
     if(offset < 900) {
